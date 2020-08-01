@@ -25,18 +25,6 @@ public class BookServiceImpl implements BookService {
         bookMap.put(book.getId(), book);
     }
 
-    {
-        Book book = new Book();
-        book.setId(bookId + 1);
-        book.setTitle("Đắc Nhân Tâm");
-        book.setAuthor("Giang Nguyễn");
-        book.setIsbnNumber(1234567890L);
-        book.setCoverPhotoURL("https://image.slidesharecdn.com/dacnhantam-120819224257-phpapp01/95/c-nhn-tm-1-728.jpg?cb=1345416573");
-        book.setPrice(13.500);
-        book.setLanguage("Tiếng Anh");
-        bookMap.put(book.getId(), book);
-    }
-
     /*
     * Hàm trả về toàn bộ danh sách
     * */
