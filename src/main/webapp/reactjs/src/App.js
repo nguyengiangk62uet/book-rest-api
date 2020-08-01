@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
-import NavigationBar from "./components/NavigationBar";
 import { Container, Row, Col } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+
+import NavigationBar from "./components/NavigationBar";
 import Welcome from "./components/Welcome";
 import Footer from "./components/Footer";
 import Book from './components/Book';
@@ -13,19 +16,21 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <Router>
       <NavigationBar />
       <Container>
         <Row>
           <Col lg={12} style={marginTop}>
-            <Welcome></Welcome>
-            <Book></Book>
-            <BookList></BookList>
+            <Switch>
+              <Route path="/" exact component={Welcome} />
+              <Route path="/add" exact component={Book} />
+              <Route path="/list" exact component={BookList} />
+            </Switch>
           </Col>
         </Row>
       </Container>
-      <Footer/>
-    </div>
+      <Footer />
+    </Router>
   );
 }
 

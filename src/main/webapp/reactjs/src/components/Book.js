@@ -3,7 +3,7 @@ import React from "react";
 class Book extends React.Component {
     render() {
         return (
-            <div className="text-while">
+            <div className="text-white">
                 Add Book
             </div>
         );
